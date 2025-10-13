@@ -18,7 +18,7 @@ opt = parser.parse_args()
 def stripe_noise(image, **params):
     if random.random() < 0.5:
         g = np.random.randn(1, image.shape[1]) * (np.random.rand() * 0.07 + 0.03)
-        b = np.random.randn(1, image.shape[1]) * (np.random.rand() * 55)
+        b = np.random.randn(1, image.shape[1]) * (np.random.rand() * 5)
     else:
         g = np.random.randn(image.shape[0], 1) * (np.random.rand() * 0.07 + 0.03)
         b = np.random.randn(image.shape[0], 1) * (np.random.rand() * 5)
@@ -90,3 +90,4 @@ def create_corrupt():
 if __name__ == '__main__':
     print("Creating " + opt.dataset_name + " corrupted images ...")
     create_corrupt()
+
