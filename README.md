@@ -60,7 +60,7 @@ CUDA_VISIBLE_DEVICES=0 python demo.py --dataset_dir ./example/{normal, hard} --o
 You should put the dataset in the "datasets" fold in the following form.
 
 ```
-TarDAL ROOT
+HM-TIR ROOT
 ├── datasets
 |   ├── HM-TIR
 |   |   ├── imgs # all clean infrared images
@@ -85,12 +85,12 @@ python train.py --dataset_name HM-TIR --dataset_dir datasets
 ### Testing
 For composited degradation scenario, run the following command:
 ```
-python evluation.py --dataset_name HM-TIR --dataset_dir datasets --deg_scenario composited --subset {normal, hard} --output results --weights put/weight/path/here
+python evaluation.py --dataset_name HM-TIR --dataset_dir datasets --deg_scenario composited --subset {normal, hard} --output results --weights put/weight/path/here
 ```
 
 For single degradation scenario, run the following command:
 ```
-python evluation.py --dataset_name HM-TIR --dataset_dir datasets --deg_scenario single --subset {contrast, blur, noise}  --output results --weights put/weight/path/here
+python evaluation.py --dataset_name HM-TIR --dataset_dir datasets --deg_scenario single --subset {contrast, blur, noise}  --output results --weights put/weight/path/here
 ```
 
 For real-world dataset evaluation, we select 70 images form Iray. You can download the [images](https://drive.google.com/file/d/1uhWCvPExarnUL-r_G0MW530RXKpj5izJ/view?usp=sharing) we selected, then run the following command:
@@ -111,9 +111,23 @@ python create_corrupt.py --dataset_name HM-TIR --dataset_dir datasets --save_dir
 
 If you have any other questions about the code and dataset, please email to [Zihang Chen](mailto:chenzi_hang@mail.dlut.edu.cn) or [Jinyuan Liu](mailto:atlantis918@hotmail.com).
 
+### Citation
+
+Please cite us if our work is useful for your research.
+
+```
+@inproceedings{liu2025enhancing,
+title       =    {Enhancing Infrared Vision: Progressive Prompt Fusion Network and Benchmark},
+author      =    {Jinyuan Liu and Zihang Chen and Zhu Liu and Zhiying Jiang and Long Ma and Xin Fan and Risheng Liu},
+booktitle   =    {The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+year        =    {2025},
+url         =    {https://openreview.net/forum?id=yEddfz9SgJ}
+}
+```
 
 ## Acknowledgement
 Our core codes are based on [MIOIR](https://github.com/Xiangtaokong/MiOIR) and [LLFormer](https://github.com/TaoWangzj/LLFormer), thanks for their contribution.
+
 
 
 
