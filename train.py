@@ -24,7 +24,7 @@ parser.add_argument("--dataset_name", default='HM-TIR', type=str, help="dataset_
 parser.add_argument("--dataset_dir", default='./datasets', type=str, help="train_dataset_dir")
 parser.add_argument("--save_dir", default='./exps', type=str, help="Save path of checkpoints")
 parser.add_argument("--batch_size", type=int, default=16, help="Training batch sizse")
-parser.add_argument("--patch_size", type=int, default=16, help="Training patch size")
+parser.add_argument("--patch_size", type=int, default=256, help="Training patch size")
 parser.add_argument("--acc_step", type=int, default=1, help="Training accelerate step")
 parser.add_argument("--epochs", type=int, default=300, help="Number of epochs")
 parser.add_argument("--val_epoch", type=int, default=5, help="Validation of epoch")
